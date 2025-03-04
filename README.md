@@ -112,4 +112,38 @@ Docker 的主要用途，目前有三大类。
 
 ---
 
+7. Docker 的安装
+Docker 是一个开源的商业产品，有两个版本：社区版（Community Edition，缩写为 CE）和企业版（Enterprise Edition，缩写为 EE）。企业版包含了一些收费服务，个人开发者一般用不到。下面的介绍都针对社区版。
+
+Docker CE 的安装请参考[官方文档](https://docs.docker.com/install/)，也可参考这本[中文线上电子书教程](https://docker_practice.gitee.io/install/)。
+
+=========经过一段安装过程==========
+
+安装完成后，运行下面的命令，验证是否安装成功。
+
+```
+$ docker version
+$ docker info
+```
+
+Docker 需要用户具有 sudo 权限，为了避免每次命令都输入sudo，可以把用户加入 Docker 用户组（官方文档）。也可以每次执行 Docker 的命令时都带上 sudo。
+
+```
+$ sudo usermod -aG docker $USER
+```
+Docker 是服务器—-客户端架构。命令行运行docker命令的时候，需要本机有 Docker 服务。如果这项服务没有启动，可以用下面的命令启动（官方文档）。
+
+```
+# 以下命令仅适用于 Linux 系统
+# service 命令的用法
+$ sudo service docker start
+
+# systemctl 命令的用法 (RHEL7/Centos7)
+$ sudo systemctl start docker
+```
+
+接下来很重要的事，是修改 Docker 的官方仓库到国内的镜像网站。
+
+参考[镜像加速器](https://docker_practice.gitee.io/install/mirror.html)！
+
 
