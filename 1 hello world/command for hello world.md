@@ -54,3 +54,7 @@ docker.io/hello-world latest bf756fb1ae65 5 months ago 13.3 kB
     docker images-aq
     #强制删除全部的镜像
 ```
+
+### 3、容器命令
+
+
