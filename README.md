@@ -146,5 +146,6 @@ $ sudo systemctl start docker
 
 参考[镜像加速器](https://docker_practice.gitee.io/install/mirror.html)！
 
+s
 
 
