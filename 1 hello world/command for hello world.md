@@ -94,3 +94,26 @@ docker.io/hello-world latest bf756fb1ae65 5 months ago 13.3 kB
 　　Run'docker container COMMAND--help'for more information on a command.
 
 ```
+　启动容器
+```
+　　docker run镜像id#新建容器并启动
+　　Usage:docker run[OPTIONS]IMAGE[COMMAND][ARG...]
+　　Options:
+　　-d,--detach Run container in background and print
+　　-e,--env list Set environment variables
+default[]
+　　-i,--interactive Keep STDIN open even if not attached
+　　-p,--publish list Publish a container's ports to the host
+default[]
+　　-P,--publish-all Publish all exposed ports to random ports
+　　--rm Automatically remove the container when it exits
+　　-t,--tty Allocate a pseudo-TTY
+　　-v,--volume list Bind mount a volume
+default[]
+　　--volume-driver string Optional volume driver for the container
+　　--volumes-from list Mount volumes from the specified container
+s
+default[]
+　　[root VM_0_5_centos~]#docker run-it centos/bin/bash#启动centos容器并进入交互
+　　[root VM_0_5_centos~]#docker run-d centos#后台启动centos容器，需要注意：docker容器使用后台运行，就必须要有要一个前台进程，docker发现当前容器没有前台进程使用，就会自动停止
+```
