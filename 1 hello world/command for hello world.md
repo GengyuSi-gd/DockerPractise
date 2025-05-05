@@ -150,4 +150,13 @@ includes all states
 　　exit#容器停止退出
 　　ctrl+P+Q#容器不停止退出
 ```
+    删除容器
     
+```　　
+    docker rm容器id#删除指定的容器，不能删除正在运行的容器，如果要强制删除rm-rf
+　　docker rm-f$
+    docker ps-aq
+    #删除所有的容器
+　　docker ps-a-q|xargs docker rm#删除所有的容器
+
+```
