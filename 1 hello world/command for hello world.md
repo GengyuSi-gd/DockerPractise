@@ -160,3 +160,12 @@ includes all states
 　　docker ps-a-q|xargs docker rm#删除所有的容器
 
 ```
+容器管理
+    
+```　
+　　docker start容器id#启动容器
+　　docker restart容器id#重启容器
+　　docker stop容器id#停止当前正在运行的容器
+　　docker kill容器id#强制停止当前容器　
+    
+```　　
