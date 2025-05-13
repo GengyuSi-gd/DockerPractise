@@ -160,7 +160,7 @@ includes all states
 　　docker ps-a-q|xargs docker rm#删除所有的容器
 
 ```
-容器管理
+    容器管理
     
 ```　
 　　docker start容器id#启动容器
@@ -169,3 +169,34 @@ includes all states
 　　docker kill容器id#强制停止当前容器　
     
 ```　　
+
+    其他
+```　　
+　　[root VM_0_5_centos~]#docker logs--help
+　　Usage:docker logs[OPTIONS]CONTAINER
+　　Fetch the logs of a container
+　　Options:
+　　--details Show extra details provided to logs
+　　-f,--follow Follow log output
+　　--help Print usage
+　　--since string Show logs since timestamp
+　　--tail string Number of lines to show from the end of the logs default"all"
+　　-t,--timestamps Show timestamps
+　　[root VM_0_5_centos~]docker run-d centos/bin/sh-c"while true;do echo hello;sleep 1;done"#模拟日志
+　　-tf#显示日志信息（一直更新）
+　　--tail number#需要显示日志条数
+　　docker logs-t--tail n容器id#查看n行日志
+　　docker logs-ft容器id#跟踪日志
+　　docker top容器id#查看容器中的进程信息
+　　docker inspect容器id#查看镜像元数据
+　　#将指定容器内资源拷贝到主机
+　　docker cp容器id:容器内路径主机目的路径
+　　[root VM_0_5_centos html]#docker cp 2d30adc4ee87:/etc/nginx/nginx.conf.
+　　#将主机内资源拷贝到指定容器
+　　docker cp主机目的路径容器id:容器内路径
+　　[root VM_0_5_centos html]#docker cp test.html d1cf09d31eda:/usr/local
+　　docker save centos>/opt/centos.tar.gz#导出docker镜像至本地
+　　docker load</opt/centos.tar.gz#导入本地镜像到docker镜像库
+　　docker stats#查看docker容器使用内存情况
+```　　
+    
