@@ -116,15 +116,17 @@ default[]
 default[]
 　　[root VM_0_5_centos~]#docker run-it centos/bin/bash#启动centos容器并进入交互
 　　[root VM_0_5_centos~]#docker run-d centos#后台启动centos容器，需要注意：docker容器使用后台运行，就必须要有要一个前台进程，docker发现当前容器没有前台进程使用，就会自动停止
+
 ```
-    进入容器
+
+ 进入容器
 ```
 　　docker exec-it容器id bashshell#进入当前正在运行的容器
 开启一个新的终端
 　　docker attach容器id#进入当前正在运行的容器
 直接进入正在运行的终端
 ```
-    查看运行的容器
+ 查看运行的容器
 ```
 　　docker ps#列出所有运行的容器docker container list
 　　Usage:docker ps[OPTIONS]
@@ -144,13 +146,13 @@ includes all states
 　　-s,--size Display total file sizes
 ```
 
-    退出容器
+ 退出容器
 
 ```
 　　exit#容器停止退出
 　　ctrl+P+Q#容器不停止退出
 ```
-    删除容器
+ 删除容器
     
 ```　　
     docker rm容器id#删除指定的容器，不能删除正在运行的容器，如果要强制删除rm-rf
@@ -160,7 +162,7 @@ includes all states
 　　docker ps-a-q|xargs docker rm#删除所有的容器
 
 ```
-    容器管理
+ 容器管理
     
 ```　
 　　docker start容器id#启动容器
@@ -170,7 +172,7 @@ includes all states
     
 ```　　
 
-    其他
+ 其他
 ```　　
 　　[root VM_0_5_centos~]#docker logs--help
 　　Usage:docker logs[OPTIONS]CONTAINER
@@ -198,5 +200,6 @@ includes all states
 　　docker save centos>/opt/centos.tar.gz#导出docker镜像至本地
 　　docker load</opt/centos.tar.gz#导入本地镜像到docker镜像库
 　　docker stats#查看docker容器使用内存情况
-```　　
-    
+```
+
+![Docker Commands Diagram](DockerCommandsDiagram.png)
