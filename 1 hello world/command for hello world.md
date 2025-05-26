@@ -204,3 +204,4 @@ includes all states
 
 ![Docker Commands Diagram](DockerCommandsDiagram.png)
 
+
